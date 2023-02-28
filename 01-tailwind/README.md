@@ -8,6 +8,9 @@ To install all you need for tailwind run:
 Then create the `tailwind.config.js` & `postcss.config.js` files:
 `npx tailwindcss init -p`
 
+And add which files it has to check in `tailwind.config.js`:
+`content: ["./src/**/*.{js,ts,jsx,tsx,html}"],`
+
 To remove '@' css rules error go to settings json and add the line:
 `"css.lint.unknownAtRules": "ignore"`
 
