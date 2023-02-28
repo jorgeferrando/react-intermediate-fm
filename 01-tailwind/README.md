@@ -14,4 +14,4 @@ To remove '@' css rules error go to settings json and add the line:
 Installar el plugin de VSCode `Tailwind CSS IntelliSense`
 
 Installar el prettier the tailwind:
-`npm i -D prettier-plugin-tailwindcss`
+`npm i -D prettier-plugin-tailwindcss` y crear el fichero prettier.config.js
