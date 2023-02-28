@@ -12,3 +12,6 @@ To remove '@' css rules error go to settings json and add the line:
 `"css.lint.unknownAtRules": "ignore"`
 
 Installar el plugin de VSCode `Tailwind CSS IntelliSense`
+
+Installar el prettier the tailwind:
+`npm i -D prettier-plugin-tailwindcss`
