@@ -21,7 +21,7 @@ const App = () => {
     <div
       className="m-0 p-0"
       style={{
-        background: "url(http://pets-images.dev-apis.com/pets/wallpaperA.jpg)",
+        ,
       }}
     >
       <BrowserRouter>

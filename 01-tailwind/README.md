@@ -14,7 +14,10 @@ And add which files it has to check in `tailwind.config.js`:
 To remove '@' css rules error go to settings json and add the line:
 `"css.lint.unknownAtRules": "ignore"`
 
-Installar el plugin de VSCode `Tailwind CSS IntelliSense`
+Install the VSCode plugin for autocomplete `Tailwind CSS IntelliSense`
 
-Installar el prettier the tailwind:
+Install the prettier of tailwind:
 `npm i -D prettier-plugin-tailwindcss` y crear el fichero prettier.config.js
+
+Forms 
+`npm i -D @tailwindcss/forms@0.5.3`
