@@ -18,12 +18,7 @@ const queryClient = new QueryClient({
 const App = () => {
   const adoptedPetHook = useState(null);
   return (
-    <div
-      className="m-0 p-0"
-      style={{
-        ,
-      }}
-    >
+    <div className="m-0 p-0">
       <BrowserRouter>
         <QueryClientProvider client={queryClient}>
           <AdoptedPetContext.Provider value={adoptedPetHook}>
