@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+    if you have a huge app with tons of forms
+    and you don't want to repeat yourself
+    you can extend tailwind using layers
+*/
+@layer base {
+  body {
+    background: "url(http://pets-images.dev-apis.com/pets/wallpaperA.jpg)";
+  }
+}
+@layer components {
+  .search-input {
+    @apply mb-5 block w-60;
+  }
+  .submit-button {
+    @apply rounded bg-orange-500 px-6 py-2 text-white;
+  }
+}
+@layer utilities {
+  .grayed-out-disabled {
+    @apply disabled:opacity-50;
+  }
+  .submit-button-hover {
+    @apply hover:opacity-50;
+  }
+}
