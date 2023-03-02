@@ -17,7 +17,7 @@ To remove '@' css rules error go to settings json and add the line:
 Install the VSCode plugin for autocomplete `Tailwind CSS IntelliSense`
 
 Install the prettier of tailwind:
-`npm i -D prettier-plugin-tailwindcss` y crear el fichero prettier.config.js
+`npm i -D prettier-plugin-tailwindcss` and create the file `prettier.config.js`
 
 Forms 
 `npm i -D @tailwindcss/forms@0.5.3`
