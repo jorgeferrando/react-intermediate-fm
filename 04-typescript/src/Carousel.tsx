@@ -1,7 +1,11 @@
-import { Component } from "react";
+import { Component, MouseEvent } from "react";
+
+interface IProps {
+    images: string[];
+}
 
 // CAN'T USE HOOKS, IF YOU WANT TO USE HOOKS NEED TO CREATE A FUNCTION COMPONENT AS BRIDGE
-class Carousel extends Component {
+class Carousel extends Component<IProps> {
     state = {
         active: 0,
     };
@@ -10,10 +14,15 @@ class Carousel extends Component {
         images: ["https://pets-images.dev-apis.com/pets/none.jpg"],
     };
 
-    handleIndexClick = (e) => {
-        this.setState({
-            active: +e.target.dataset.index,
-        });
+    handleIndexClick = (event: MouseEvent<HTMLElement>) => {
+        if (!(event.target instanceof HTMLElement)) {
+            return;
+        }
+        if (event.target.dataset.index) {
+            this.setState({
+                active: +event.target.dataset.index,
+            });
+        }
     };
 
     render() {

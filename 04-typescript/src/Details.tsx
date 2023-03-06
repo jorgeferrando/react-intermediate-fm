@@ -8,10 +8,16 @@ import ErrorBoundary from "./ErrorBoundary";
 import Modal from "./Modal";
 
 const Details = () => {
+    const { id } = useParams();
+
+    if (!id) {
+        throw new Error("Details: Give me an ID!");
+    }
+
     const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unused-vars
     const [_, setAdoptedPet] = useContext(AdoptedPetContext);
-    const { id } = useParams();
     const results = useQuery(["details", id], fetchPet);
 
     if (results.isLoading) {
@@ -22,8 +28,10 @@ const Details = () => {
         );
     }
 
-    const pet = results.data.pets[0];
-
+    const pet = results?.data?.pets[0];
+    if (!pet) {
+        throw new Error("There is no pet with ID: " + id);
+    }
     return (
         <div className="details">
             <Carousel images={pet.images} />
@@ -61,11 +69,11 @@ const Details = () => {
     );
 };
 
-function DetailsErrorBoundary(props) {
+function DetailsErrorBoundary() {
     //it is the only case when you use the chain operator to pass props
     return (
         <ErrorBoundary>
-            <Details {...props} />
+            <Details />
         </ErrorBoundary>
     );
 }

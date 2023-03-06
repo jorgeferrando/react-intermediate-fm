@@ -1,16 +1,16 @@
 // mostly code from reactjs.org/docs/error-boundaries.html
-import { Component } from "react";
+import { Component, ErrorInfo, ReactElement } from 'react';
 import { Link } from "react-router-dom";
 
 // With ErrorBoundary you can't use function component you MUST use class component because of
 // the methods getDerivedStateFromError and componentDidCatch
-class ErrorBoundary extends Component {
+class ErrorBoundary extends Component<{children: ReactElement}> {
     state = { hasError: false };
     //when an error occurs the state will mutate to the result of this function
     static getDerivedStateFromError() {
         return { hasError: true };
     }
-    componentDidCatch(error, info) {
+    componentDidCatch(error: Error, info: ErrorInfo) {
         // here you can send to Sentry or Raygun or any log error
         console.error("ErrorBoundary caught an error", error, info);
     }
