@@ -2,6 +2,7 @@
     "name": "03-react-with-jsx",
     "version": "1.0.0",
     "description": "",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "main": "App.js",
     "scripts": {
         "dev": "vite",
