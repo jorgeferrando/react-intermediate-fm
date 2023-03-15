@@ -1,6 +1,5 @@
 import { expect, test } from "vitest";
 import { render } from "@testing-library/react";
-import { StaticRouter } from "react-router-dom/server";
 import Carousel from "../Carousel";
 
 test("lets users click on thumbnails to make them the hero", async () => {
@@ -20,6 +19,6 @@ test("lets users click on thumbnails to make them the hero", async () => {
 
         // should check others not have active class
     }
-    
+
     carousel.unmount();
 });
